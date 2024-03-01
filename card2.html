@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+   
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Noto-Sans:400,700);
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+    body {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+ 
+    }
+    .wrapper{
+        width: 35rem;
+    }
+    .wrapper ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .item a {
+        width: 5rem;
+        height: 5rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+        overflow: hidden;
+        border: 3px solid #fff;
+        position: relative;
+
+    }
+    .item a::before{
+        content: "";
+        position: absolute;
+        background: var(--bg);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        scale:1 0;
+        transform-origin: bottom;
+        transition: scale 0.5s ease;
+    }
+    .item:hover a::before{
+        scale: 1 1;
+    }
+
+    .icon{
+        font-size: 2rem;
+        color: #000;
+        transition: 0.5s ease;
+        z-index: 2;
+    }
+    .item a:hover .icon{
+        color: #fff;
+        transform: rotateY(360deg);
+    }
+    .item a:hover .fa-snapchat{
+        color:#000;
+    }
+    
+    .item:nth-child(1){
+        --bg: linear-gradient(99deg, rgba(249,206,52,1) 1%, rgba(238,42,123,1) 46%, rgba(98,40,215,1) 94%);
+    }
+    .item:nth-child(2){
+        --bg:#0777e9;
+    }
+    .item:nth-child(3){
+        --bg:#fffc00;
+    }
+    .item:nth-child(4){
+        --bg:#5865f2;
+    }
+    .item:nth-child(5){
+        --bg:#000;
+    }
+
+
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li class="item">
+                <a href="#"><i class="fa-brands fa-instagram icon"></i></a>
+            </li>
+            <li class="item">
+                <a href="#"><i class="fa-brands fa-facebook icon"></i></a>
+            </li>
+            <li class="item">
+                <a href="#"><i class="fa-brands fa-snapchat icon"></i></a>
+            </li>
+            <li class="item">
+                <a href="#"><i class="fa-brands fa-discord icon"></i></a>
+            </li>
+            <li class="item">
+                <a href="#"><i class="fa-brands fa-twitter icon"></i></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
